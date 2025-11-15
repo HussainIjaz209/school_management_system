@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
