@@ -8,23 +8,22 @@ const Layout = ({ children, role }) => {
   const { user } = useAuth()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      <Header 
-        user={user} 
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+      <Header
+        user={user}
         onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         sidebarOpen={sidebarOpen}
       />
-      
+
       <div className="flex">
-        <Sidebar 
-          role={role} 
+        <Sidebar
+          role={role}
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
         />
-        
-        <main className={`flex-1 p-8 transition-all duration-300 ${
-          sidebarOpen ? 'lg:ml-64' : 'lg:ml-0'
-        }`}>
+
+        <main className={`flex-1 p-8 transition-all duration-300 ${sidebarOpen ? 'lg:ml-64' : 'lg:ml-0'
+          }`}>
           {children}
         </main>
       </div>
